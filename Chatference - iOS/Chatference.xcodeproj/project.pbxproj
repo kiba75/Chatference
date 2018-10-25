@@ -15,6 +15,7 @@
 		D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */; };
 		D19C38B12181ACEF00887ED9 /* ChatferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38B02181ACEF00887ED9 /* ChatferenceTests.swift */; };
 		D19C38BC2181ACEF00887ED9 /* ChatferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */; };
+		D19C38CA2181BADD00887ED9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D19C38B72181ACEF00887ED9 /* ChatferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatferenceUITests.swift; sourceTree = "<group>"; };
 		D19C38BD2181ACF000887ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Chatference/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		D19C388F2181ACEE00887ED9 = {
 			isa = PBXGroup;
 			children = (
+				D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */,
 				D19C389A2181ACEE00887ED9 /* Chatference */,
 				D19C38AF2181ACEF00887ED9 /* ChatferenceTests */,
 				D19C38BA2181ACEF00887ED9 /* ChatferenceUITests */,
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19C38CA2181BADD00887ED9 /* GoogleService-Info.plist in Resources */,
 				D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */,
 				D19C38A32181ACEF00887ED9 /* Assets.xcassets in Resources */,
 				D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */,
