@@ -7,39 +7,33 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class RoomApi: ConnectionApi {
     
-    typealias Completion = () -> ()
-    
-    func createRoom(code: String, name: String, completion: @escaping Completion) {
-        
+    func createRoom(code: String, name: String, completion: @escaping () -> Void) {
+
         let room: [String: Any] = ["code": code, "name": name, "state": 1]
         
-        let dbref = getDataBaseReference()
-        dbref.child("Room").childByAutoId().setValue(room) { (nil, dbref) in
+        getDataBaseReference().child("Room").childByAutoId().setValue(room) { (nil, dbref) in
             completion()
         }
     }
     
-    func getRoom(code: String, completion: Completion) {
-        getDataBaseReference().child("Room").queryOrdered(byChild: "code").queryEqual(toValue: code).observe(.value, with: { (snapshot) in
-            if snapshot.exists() {
-                print("we have that artist, the id is \(snapshot)")
+    func getRoom(code: String, completion: @escaping (Room) -> Void) {
+        
+        getDataBaseReference().child("Room").queryOrdered(byChild: "code").queryEqual(toValue: code).observeSingleEvent(of: .value) { (snapshot) in
+            
+            guard let dict = snapshot.value as? [String:Any] else { return }
+            self.getDataBaseReference().child("Room").child(dict.first!.key).observeSingleEvent(of: .value, with: { (snapshot) in
                 
-                for a in ((snapshot.value as AnyObject).allKeys)!{
-                    print(a)
+                if snapshot.exists() {
+                    let room = Room(uuid: dict.first!.key, snapshot: snapshot)
+                    completion(room!)
+                } else {
+                    print("we don't have that, add it to the DB now")
                 }
-                
-            } else {
-                print("we don't have that, add it to the DB now")
-            }
-        })
-    }
-    
-    func readRoom() {
-        getDataBaseReference().child("Room").observe(.childAdded, with: { (data) in
-            print(data)
-        })
+            })
+        }
     }
 }

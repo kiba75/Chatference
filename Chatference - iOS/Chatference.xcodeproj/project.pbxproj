@@ -19,6 +19,8 @@
 		D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */; };
 		D19C38CF2181D7B000887ED9 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CE2181D7B000887ED9 /* Room.swift */; };
 		D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D02181DCBE00887ED9 /* RoomApi.swift */; };
+		D19C38D321820F2A00887ED9 /* QuestionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D221820F2A00887ED9 /* QuestionApi.swift */; };
+		D19C38D521823E9500887ED9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D421823E9500887ED9 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionApi.swift; sourceTree = "<group>"; };
 		D19C38CE2181D7B000887ED9 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D19C38D02181DCBE00887ED9 /* RoomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApi.swift; sourceTree = "<group>"; };
+		D19C38D221820F2A00887ED9 /* QuestionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionApi.swift; sourceTree = "<group>"; };
+		D19C38D421823E9500887ED9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +169,7 @@
 			children = (
 				D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */,
 				D19C38D02181DCBE00887ED9 /* RoomApi.swift */,
+				D19C38D221820F2A00887ED9 /* QuestionApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				D19C38CE2181D7B000887ED9 /* Room.swift */,
+				D19C38D421823E9500887ED9 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19C38D321820F2A00887ED9 /* QuestionApi.swift in Sources */,
 				D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */,
 				D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */,
 				D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */,
 				D19C38CF2181D7B000887ED9 /* Room.swift in Sources */,
+				D19C38D521823E9500887ED9 /* Question.swift in Sources */,
 				D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

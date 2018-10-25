@@ -13,18 +13,30 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-//        RoomApi().createRoom(code: "RoomCode", name: "RynoRoom", completion: {
-//            print("Successfully created")
-//        })
+//        createRoom()
         
-        RoomApi().getRoom(code: "RoomCode", completion: {
-            print("Successfully got room")
+        RoomApi().getRoom(code: "1234") { (room) in
+
+            //            self.postQuestion(room: room, question: "STAAAPPHH")
+            
+            QuestionApi().getQuestions(room: room, observe: { (question) in
+                print(question.question)
+            })
+            
+        }
+    }
+    
+    func createRoom() {
+        RoomApi().createRoom(code: "1234", name: "Absa PI Planning", completion: {
+            print("Successfully created")
         })
-        
-//        RoomApi().readRoom()
-        
+    }
+    
+    func postQuestion(room: Room, question: String) {
+        QuestionApi().postQuestion(room: room, question: question, type: 0, completion: {
+            print("Successfully post question")
+        })
     }
 }
 
