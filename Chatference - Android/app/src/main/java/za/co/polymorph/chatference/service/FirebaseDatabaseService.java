@@ -11,7 +11,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import za.co.polymorph.chatference.callbacks.CreateRoomCallback;
 import za.co.polymorph.chatference.callbacks.GetRoomCallback;
+import za.co.polymorph.chatference.callbacks.PostQuestionCallback;
 import za.co.polymorph.chatference.interfaces.IDatabaseService;
+import za.co.polymorph.chatference.model.Question;
 import za.co.polymorph.chatference.model.Room;
 
 public class FirebaseDatabaseService implements IDatabaseService {
@@ -74,5 +76,33 @@ public class FirebaseDatabaseService implements IDatabaseService {
                 getRoomCallback.error(databaseError.getMessage());
             }
         });
+    }
+
+    @Override
+    public void postQuestion(String roomUuid, String question, int type, final PostQuestionCallback postQuestionCallback) {
+        final Question questionEntry = new Question(roomUuid, question, 0, type, 1);
+
+        database.child("Question").child(database.push().getKey()).setValue(questionEntry, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                if (databaseError == null) {
+                    questionEntry.setId(databaseReference.getKey());
+                    postQuestionCallback.success(questionEntry);
+                } else {
+                    postQuestionCallback.error(databaseError.getMessage());
+                }
+
+            }
+        });
+    }
+
+    @Override
+    public void getQuestions(String roomUuid, ValueEventListener valueEventListener) {
+        database.child("Question").orderByChild("roomUuid").equalTo(roomUuid).addValueEventListener(valueEventListener);
+    }
+
+    @Override
+    public void cancelGettingQuestions(ValueEventListener valueEventListener) {
+        database.removeEventListener(valueEventListener);
     }
 }
