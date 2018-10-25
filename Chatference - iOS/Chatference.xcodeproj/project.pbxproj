@@ -98,11 +98,13 @@
 			isa = PBXGroup;
 			children = (
 				D19C389B2181ACEE00887ED9 /* AppDelegate.swift */,
-				D19C389D2181ACEE00887ED9 /* ViewController.swift */,
-				D19C389F2181ACEE00887ED9 /* Main.storyboard */,
-				D19C38A22181ACEF00887ED9 /* Assets.xcassets */,
-				D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */,
-				D19C38A72181ACEF00887ED9 /* Info.plist */,
+				ED57F3362181B4FE0009BDC2 /* ViewControllers */,
+				ED57F3372181B5060009BDC2 /* Views */,
+				ED57F33B2181B51E0009BDC2 /* Storyboards */,
+				ED57F33A2181B5180009BDC2 /* Models */,
+				ED57F3392181B5130009BDC2 /* Utils */,
+				ED57F3382181B50C0009BDC2 /* Resources */,
+				ED57F33C2181B5270009BDC2 /* Supporting Files */,
 			);
 			path = Chatference;
 			sourceTree = "<group>";
@@ -123,6 +125,60 @@
 				D19C38BD2181ACF000887ED9 /* Info.plist */,
 			);
 			path = ChatferenceUITests;
+			sourceTree = "<group>";
+		};
+		ED57F3362181B4FE0009BDC2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D19C389D2181ACEE00887ED9 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED57F3372181B5060009BDC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED57F3382181B50C0009BDC2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D19C38A22181ACEF00887ED9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED57F3392181B5130009BDC2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED57F33A2181B5180009BDC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED57F33B2181B51E0009BDC2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D19C389F2181ACEE00887ED9 /* Main.storyboard */,
+				D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ED57F33C2181B5270009BDC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D19C38A72181ACEF00887ED9 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
