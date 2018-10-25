@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1063971382382",
+    "firebase_url": "https://chatference.firebaseio.com",
+    "project_id": "chatference",
+    "storage_bucket": "chatference.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063971382382:android:3b0c9348e9263e3f",
+        "android_client_info": {
+          "package_name": "za.co.polymorph.chatference"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063971382382-dtu33botvlb4g52cn1higeh4583stqls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "za.co.polymorph.chatference",
+            "certificate_hash": "ed2efe00a91344cc698b8416bbf54b4acd009175"
+          }
+        },
+        {
+          "client_id": "1063971382382-kom17gbnmphpb27i2mchn01hbocvtcug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2w38TLWamXdzZj0IpExlxt3XmDO4JkhE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063971382382-kom17gbnmphpb27i2mchn01hbocvtcug.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063971382382-il09187re55clnmg8s6rt1nm50p6qmh2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "za.co.polymorph.Chatference"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
