@@ -3,9 +3,11 @@ package za.co.polymorph.chatference.service;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import za.co.polymorph.chatference.callbacks.CreateRoomCallback;
 import za.co.polymorph.chatference.callbacks.GetRoomCallback;
@@ -31,13 +33,14 @@ public class FirebaseDatabaseService implements IDatabaseService {
 
     @Override
     public void createRoom(String code, String name, final CreateRoomCallback createRoomCallback) {
-        Room room = new Room(code, name, 1);
+        final Room room = new Room(code, name, 1);
 
         database.child("Room").child(database.push().getKey()).setValue(room, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if (databaseError == null) {
-                    createRoomCallback.success(databaseReference.getKey());
+                    room.setId(databaseReference.getKey());
+                    createRoomCallback.success(room);
                 } else {
                     createRoomCallback.error(databaseError.getMessage());
                 }
@@ -46,6 +49,30 @@ public class FirebaseDatabaseService implements IDatabaseService {
     }
 
     @Override
-    public void getRoom(String code, GetRoomCallback getRoomCallback) {
+    public void getRoom(String code, final GetRoomCallback getRoomCallback) {
+        database.child("Room").orderByChild("code").equalTo(code).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChildren()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        String code = (String) snapshot.child("code").getValue();
+                        String name = (String) snapshot.child("name").getValue();
+                        long state = (long) snapshot.child("state").getValue();
+
+                        Room room = new Room(code, name, (int) state);
+                        room.setId(snapshot.getKey());
+                        getRoomCallback.success(room);
+                        break; //TODO Cater for more than one result.  There should be only one
+                    }
+                } else {
+                    getRoomCallback.noResult();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                getRoomCallback.error(databaseError.getMessage());
+            }
+        });
     }
 }

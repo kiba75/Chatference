@@ -9,6 +9,8 @@ public class Room {
     public String name;
     public int state;
 
+    private String id;
+
     public Room () {
     }
 
@@ -16,5 +18,13 @@ public class Room {
         this.code = code;
         this.name = name;
         this.state = state;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
