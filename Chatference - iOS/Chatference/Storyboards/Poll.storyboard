@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0C-mO-lbd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poll View Controller-->
+        <scene sceneID="NV3-LY-9PD">
+            <objects>
+                <viewController id="d0C-mO-lbd" customClass="Poll_ViewController" customModule="Chatference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNl-oz-hBh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-qt-DG1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.2274509804" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IXC-Mg-b1m" firstAttribute="trailing" secondItem="nvj-qt-DG1" secondAttribute="trailing" id="P97-Ao-GwB"/>
+                            <constraint firstItem="IXC-Mg-b1m" firstAttribute="bottom" secondItem="nvj-qt-DG1" secondAttribute="bottom" id="Rl0-2t-yhW"/>
+                            <constraint firstItem="nvj-qt-DG1" firstAttribute="leading" secondItem="IXC-Mg-b1m" secondAttribute="leading" id="kRf-Jy-oRJ"/>
+                            <constraint firstItem="nvj-qt-DG1" firstAttribute="top" secondItem="HNl-oz-hBh" secondAttribute="top" id="nco-hN-ymd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IXC-Mg-b1m"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="Rl0-2t-yhW" id="LTB-d7-Bti"/>
+                        <outlet property="contentView" destination="nvj-qt-DG1" id="tLY-Wx-MNg"/>
+                        <outlet property="topConstraint" destination="nco-hN-ymd" id="3D0-fi-u1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vpe-yH-GUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="111"/>
+        </scene>
+    </scenes>
+</document>
