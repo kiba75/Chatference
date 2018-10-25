@@ -16,6 +16,9 @@
 		D19C38B12181ACEF00887ED9 /* ChatferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38B02181ACEF00887ED9 /* ChatferenceTests.swift */; };
 		D19C38BC2181ACEF00887ED9 /* ChatferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */; };
 		D19C38CA2181BADD00887ED9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
+		D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */; };
+		D19C38CF2181D7B000887ED9 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CE2181D7B000887ED9 /* Room.swift */; };
+		D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D02181DCBE00887ED9 /* RoomApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,10 @@
 		D19C38B72181ACEF00887ED9 /* ChatferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatferenceUITests.swift; sourceTree = "<group>"; };
 		D19C38BD2181ACF000887ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Chatference/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionApi.swift; sourceTree = "<group>"; };
+		D19C38CE2181D7B000887ED9 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		D19C38D02181DCBE00887ED9 /* RoomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApi.swift; sourceTree = "<group>"; };
 		F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,15 @@
 			path = ChatferenceUITests;
 			sourceTree = "<group>";
 		};
+		D19C38CB2181C87600887ED9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */,
+				D19C38D02181DCBE00887ED9 /* RoomApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		ED57F3362181B4FE0009BDC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +195,7 @@
 		ED57F3392181B5130009BDC2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D19C38CB2181C87600887ED9 /* Api */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,6 +203,7 @@
 		ED57F33A2181B5180009BDC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D19C38CE2181D7B000887ED9 /* Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +383,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -373,6 +391,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +407,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */,
+				D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */,
+				D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */,
+				D19C38CF2181D7B000887ED9 /* Room.swift in Sources */,
 				D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
