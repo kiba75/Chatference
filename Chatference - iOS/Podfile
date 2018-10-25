@@ -1,0 +1,15 @@
+platform :ios, "10.0"
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+inhibit_all_warnings!
+
+use_frameworks!
+
+target "Chatference" do
+
+	pod 'Alamofire'
+    pod 'SDWebImage'
+    pod 'Firebase'
+    
+end
