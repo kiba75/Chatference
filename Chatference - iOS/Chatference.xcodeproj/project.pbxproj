@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324072A09F94754615B09BD3 /* Pods_Chatference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */; };
 		D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389B2181ACEE00887ED9 /* AppDelegate.swift */; };
 		D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389D2181ACEE00887ED9 /* ViewController.swift */; };
 		D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C389F2181ACEE00887ED9 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F7BC16842209B3641870AF5 /* Pods-Chatference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.debug.xcconfig"; sourceTree = "<group>"; };
+		57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C38982181ACEE00887ED9 /* Chatference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C389B2181ACEE00887ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19C389D2181ACEE00887ED9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		D19C38B72181ACEF00887ED9 /* ChatferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatferenceUITests.swift; sourceTree = "<group>"; };
 		D19C38BD2181ACF000887ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324072A09F94754615B09BD3 /* Pods_Chatference.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		668B17948EA52BF629EB8F35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC62F9476818CBEA0DED88D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F7BC16842209B3641870AF5 /* Pods-Chatference.debug.xcconfig */,
+				F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D19C388F2181ACEE00887ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				D19C38AF2181ACEF00887ED9 /* ChatferenceTests */,
 				D19C38BA2181ACEF00887ED9 /* ChatferenceUITests */,
 				D19C38992181ACEE00887ED9 /* Products */,
+				CC62F9476818CBEA0DED88D8 /* Pods */,
+				668B17948EA52BF629EB8F35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D19C38C02181ACF000887ED9 /* Build configuration list for PBXNativeTarget "Chatference" */;
 			buildPhases = (
+				37CAF470A6E056E32BFF9AF0 /* [CP] Check Pods Manifest.lock */,
 				D19C38942181ACEE00887ED9 /* Sources */,
 				D19C38952181ACEE00887ED9 /* Frameworks */,
 				D19C38962181ACEE00887ED9 /* Resources */,
+				D7BD12303EF836D69D1F9D4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +332,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37CAF470A6E056E32BFF9AF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatference-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BD12303EF836D69D1F9D4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chatference/Pods-Chatference-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatference/Pods-Chatference-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D19C38942181ACEE00887ED9 /* Sources */ = {
@@ -486,6 +557,7 @@
 		};
 		D19C38C12181ACF000887ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F7BC16842209B3641870AF5 /* Pods-Chatference.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +575,7 @@
 		};
 		D19C38C22181ACF000887ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
