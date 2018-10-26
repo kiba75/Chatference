@@ -10,6 +10,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
 import za.co.polymorph.chatference.callbacks.CreateRoomCallback;
+import za.co.polymorph.chatference.callbacks.GetQuestionsCallback;
 import za.co.polymorph.chatference.callbacks.GetRoomCallback;
 import za.co.polymorph.chatference.callbacks.PostQuestionCallback;
 import za.co.polymorph.chatference.interfaces.IDatabaseService;
@@ -20,8 +21,7 @@ import za.co.polymorph.chatference.service.FirebaseDatabaseService;
 public class MainActivity extends AppCompatActivity {
 
     private IDatabaseService databaseService;
-    private String roomUuid = null;
-    private ValueEventListener valueEventListener;
+    private GetQuestionsCallback getQuestionsCallback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         databaseService = FirebaseDatabaseService.getInstance();
-
-        valueEventListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Toast.makeText(MainActivity.this, "New question was added", Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MainActivity.this, "There was an Error getting all the questions", Toast.LENGTH_LONG).show();
-            }
-        };
 
         getSpecificRoom();
         //createRoom();
@@ -61,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getSpecificRoom() {
-        databaseService.getRoom("abc", new GetRoomCallback() {
+        databaseService.getRoom("1234", new GetRoomCallback() {
             @Override
             public void success(Room room) {
                 Toast.makeText(MainActivity.this, "Found the Room:  " + room.getId(), Toast.LENGTH_LONG).show();
-                roomUuid = room.getId();
-                postQuestion(room.getId());
+                //postQuestion(room.getId());
+                getQuestions(room.getId());
             }
 
             @Override
@@ -98,6 +86,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getQuestions(String roomUuid) {
-        databaseService.getQuestions(roomUuid, valueEventListener);
+        getQuestionsCallback = new GetQuestionsCallback() {
+            @Override
+            public void questionsUpdate(Question [] questions) {
+                Toast.makeText(MainActivity.this, "Questions received", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void error(String message) {
+                Toast.makeText(MainActivity.this, "There was an Error while getting questions:  " + message, Toast.LENGTH_LONG).show();
+            }
+        };
+
+        databaseService.getQuestions(roomUuid, getQuestionsCallback);
     }
 }
