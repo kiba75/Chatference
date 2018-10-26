@@ -24,6 +24,10 @@ class Home_ViewController: UIViewController {
         setupView()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embeded_AnswersTableViewController" {
             answersTableViewController = segue.destination as? Answer_TableViewController

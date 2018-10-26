@@ -28,6 +28,10 @@ class Login_ViewController: UIViewController {
         setupView()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - Actions
     @IBAction func joinPressed() {
         sessionTextField.resignFirstResponder()
@@ -72,7 +76,7 @@ class Login_ViewController: UIViewController {
 
     func animateLogo() {
 
-        let animationView: LOTAnimationView = LOTAnimationView(name: "logo02")
+        let animationView: LOTAnimationView = LOTAnimationView(name: "logo03")
         animationView.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
         animationView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 180)
         animationView.contentMode = .scaleAspectFill

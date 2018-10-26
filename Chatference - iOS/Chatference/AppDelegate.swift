@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 0
 
+        // Status bar
+        UIApplication.shared.statusBarStyle = .lightContent
+
         return true
     }
 

@@ -31,6 +31,7 @@
 		ED57F34E2181E4ED0009BDC2 /* AnswersTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED57F34D2181E4ED0009BDC2 /* AnswersTableViewController.storyboard */; };
 		ED57F3502181F85A0009BDC2 /* Poll_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57F34F2181F85A0009BDC2 /* Poll_ViewController.swift */; };
 		ED57F3522181F8CC0009BDC2 /* Poll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED57F3512181F8CC0009BDC2 /* Poll.storyboard */; };
+		ED83495A2183360B00290BC6 /* logo03.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8349592183360B00290BC6 /* logo03.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		ED57F34D2181E4ED0009BDC2 /* AnswersTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswersTableViewController.storyboard; sourceTree = "<group>"; };
 		ED57F34F2181F85A0009BDC2 /* Poll_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll_ViewController.swift; sourceTree = "<group>"; };
 		ED57F3512181F8CC0009BDC2 /* Poll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Poll.storyboard; sourceTree = "<group>"; };
+		ED8349592183360B00290BC6 /* logo03.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo03.json; sourceTree = "<group>"; };
 		F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 		ED068EB82183314500E37C7A /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				ED8349592183360B00290BC6 /* logo03.json */,
 				ED068EBB2183342600E37C7A /* logo02.json */,
 			);
 			path = Animations;
@@ -391,6 +394,7 @@
 				ED57F3462181C1E80009BDC2 /* Home.storyboard in Resources */,
 				ED57F3522181F8CC0009BDC2 /* Poll.storyboard in Resources */,
 				ED57F33E2181BC150009BDC2 /* Login.storyboard in Resources */,
+				ED83495A2183360B00290BC6 /* logo03.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
