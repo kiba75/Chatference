@@ -20,7 +20,7 @@ class Home_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = SessionService.shared.room?.name
+        self.navigationItem.title = ("\(SessionService.shared.room!.name) - \(SessionService.shared.room!.code)")
         setupView()
     }
 
