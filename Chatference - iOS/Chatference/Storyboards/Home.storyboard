@@ -46,6 +46,9 @@
                                         <state key="normal" title="&gt;&gt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="postPressed" destination="MEO-xd-612" eventType="touchUpInside" id="Ui5-Fs-kOo"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Do you have a question or comment?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-Tj-B3j">
                                         <rect key="frame" x="16" y="12" width="293" height="40"/>
@@ -55,6 +58,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                        <connections>
+                                            <action selector="keyboardReturnPressed" destination="MEO-xd-612" eventType="primaryActionTriggered" id="AdX-1f-ThP"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1450980392" green="0.61960784310000006" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,20 +137,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="#Session Name" id="pKp-Hx-tgU"/>
                     <connections>
+                        <outlet property="commentTextField" destination="vwx-Tj-B3j" id="nHg-sv-QrZ"/>
                         <outlet property="pollView" destination="lfl-iu-IlZ" id="TPn-zN-iL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-IM-tPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="384.23645320197045"/>
-        </scene>
-        <!--Poll-->
-        <scene sceneID="MBh-tQ-gHk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Poll" id="tyd-0q-Upw" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwi-yv-CVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="315"/>
         </scene>
         <!--AnswersTableViewController-->
         <scene sceneID="Ddf-Xd-QGc">

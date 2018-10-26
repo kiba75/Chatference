@@ -15,6 +15,8 @@ class Home_ViewController: UIViewController {
     weak var answersTableViewController: Answer_TableViewController?
     //weak var pollViewController: Poll_ViewController?
 
+    @IBOutlet weak var commentTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = SessionService.shared.room?.name
@@ -42,6 +44,17 @@ class Home_ViewController: UIViewController {
         //pollViewController?.animateIn()
     }
 
+    @IBAction func postPressed() {
+        let textToPost = commentTextField.text
+        postComment(textToPost)
+        commentTextField.text = ""
+        commentTextField.resignFirstResponder()
+    }
+
+    @IBAction func keyboardReturnPressed() {
+        postPressed()
+    }
+
     //MARK: - View Setup
     private func setupView() {
 
@@ -51,12 +64,24 @@ class Home_ViewController: UIViewController {
     }
 }
 
+//MARK: - View Stuff
 extension Home_ViewController {
 
     fileprivate func hideNavigationBarBorder() {
         // Remove the silly navigation bar white line at the bottom.
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+}
+
+//MARK: - Posting comments
+extension Home_ViewController {
+
+    fileprivate func postComment(_ text: String?) {
+        if text == nil || text == "" {
+            return
+        }
+
+        //api here
     }
 }
