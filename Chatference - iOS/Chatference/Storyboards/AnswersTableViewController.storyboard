@@ -93,6 +93,11 @@
                                         <constraint firstItem="1P7-fJ-H9j" firstAttribute="top" secondItem="g8g-Rk-HaM" secondAttribute="bottom" constant="8" id="xal-uk-siG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerLabel" destination="g8g-Rk-HaM" id="k8A-L2-lVy"/>
+                                    <outlet property="nameLabel" destination="7Vx-gG-071" id="Fub-du-t7Y"/>
+                                    <outlet property="voteLabel" destination="vGH-iq-OXk" id="9hI-4X-LKa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

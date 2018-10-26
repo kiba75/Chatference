@@ -35,7 +35,7 @@ class Home_ViewController: UIViewController {
 
     //MARK: - Actions
     @IBAction func pollPressed() {
-        pollViewController?.animateIn()
+        //pollViewController?.animateIn()
     }
 
     //MARK: - View Setup
@@ -44,6 +44,7 @@ class Home_ViewController: UIViewController {
         hideNavigationBarBorder()
         
         pollView.setupView()
+        pollViewController?.view.removeFromSuperview()
     }
 }
 

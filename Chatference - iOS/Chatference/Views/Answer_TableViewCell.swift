@@ -11,4 +11,17 @@ import UIKit
 
 class Answer_TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
+
+    //@IBOutlet weak var voteButton: UIButton!
+    @IBOutlet weak var voteLabel: UILabel!
+
+    func setupCell(_ question: Question) {
+        // Upcoming functionality
+        nameLabel.text = ""
+
+        answerLabel.text = question.question
+        voteLabel.text = String(question.votes)
+    }
 }

@@ -12,7 +12,6 @@
         <!--#Session Name-->
         <scene sceneID="YIB-vM-KrP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-IM-tPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MEO-xd-612" customClass="Home_ViewController" customModule="Chatference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IeR-aM-zUe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
@@ -145,6 +144,7 @@
                         <outlet property="pollView" destination="lfl-iu-IlZ" id="TPn-zN-iL0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-IM-tPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="384.23645320197045"/>
         </scene>
