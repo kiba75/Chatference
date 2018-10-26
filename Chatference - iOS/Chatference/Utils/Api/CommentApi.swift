@@ -26,6 +26,7 @@ class CommentApi: ConnectionApi {
             
             if snapshot.exists() {
                 let question = Comment(snapshot: snapshot)
+//                print(question)
                 observe(question!)
             }
         }

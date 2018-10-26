@@ -13,14 +13,20 @@ class Answer_TableViewController: UITableViewController {
 
     @IBOutlet weak var answersTableView: UITableView!
 
+    var comments: [Comment] = [Comment(question: "Initial question", roomUuid: SessionService.shared.room!.uuid, state: 1, votes: 5)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // This will cause the tableview to autolayout the height for the cell, as the content is dynamic
         tableView.estimatedRowHeight = 50.0
         tableView.rowHeight = UITableView.automaticDimension
+        
+        CommentApi().getComments(room: SessionService.shared.room!) { (comment) in
+            self.comments.append(comment)
+            self.tableView.reloadData()
+        }
     }
-
 }
 
 //MARK: - TableView Datasource
@@ -31,13 +37,17 @@ extension Answer_TableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return comments.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
          let cell: Answer_TableViewCell = tableView.dequeueReusableCell(withIdentifier: "AnswerCellIdentifier") as! Answer_TableViewCell
 
+        cell.answerLabel.text = comments[indexPath.row].question
+        cell.nameLabel.text = comments[indexPath.row].roomUuid
+        cell.voteLabel.text = ("\(comments[indexPath.row].votes)")
+        
         return cell
     }
 }
