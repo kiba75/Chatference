@@ -44,10 +44,7 @@ extension Answer_TableViewController {
 
          let cell: Answer_TableViewCell = tableView.dequeueReusableCell(withIdentifier: "AnswerCellIdentifier") as! Answer_TableViewCell
 
-        cell.answerLabel.text = comments[indexPath.row].question
-        cell.nameLabel.text = comments[indexPath.row].roomUuid
-        cell.voteLabel.text = ("\(comments[indexPath.row].votes)")
-        
+        cell.setupCell(comments[indexPath.row])
         return cell
     }
 }
