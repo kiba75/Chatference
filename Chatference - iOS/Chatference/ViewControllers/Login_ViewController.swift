@@ -22,11 +22,13 @@ class Login_ViewController: UIViewController {
 
     //MARK: - Actions
     @IBAction func joinPressed() {
-        performSegue(withIdentifier: "segue_Home_ViewController", sender: nil)
+        RoomApi().getRoom(code: sessionTextField.text!) { (room) in
+            SessionService.shared.room = room
+            self.performSegue(withIdentifier: "segue_Home_ViewController", sender: nil)
+        }
     }
 
     @IBAction func createPressed() {
-
     }
 
     //MARK: - View Setup

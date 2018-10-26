@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		324072A09F94754615B09BD3 /* Pods_Chatference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */; };
 		D10E67002182FA21003F88CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
+		D10E67052182FBC1003F88CE /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E67042182FBC1003F88CE /* SessionService.swift */; };
 		D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389B2181ACEE00887ED9 /* AppDelegate.swift */; };
 		D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389D2181ACEE00887ED9 /* ViewController.swift */; };
 		D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C389F2181ACEE00887ED9 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		4F7BC16842209B3641870AF5 /* Pods-Chatference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatference/Pods-Chatference.debug.xcconfig"; sourceTree = "<group>"; };
 		57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10E67042182FBC1003F88CE /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		D19C38982181ACEE00887ED9 /* Chatference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C389B2181ACEE00887ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19C389D2181ACEE00887ED9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 				F533AD6CDAEE1A9BBC72D271 /* Pods-Chatference.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D10E67032182FB32003F88CE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D10E67042182FBC1003F88CE /* SessionService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D19C388F2181ACEE00887ED9 = {
@@ -229,6 +239,7 @@
 		ED57F3392181B5130009BDC2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D10E67032182FB32003F88CE /* Service */,
 				D19C38CB2181C87600887ED9 /* Api */,
 			);
 			path = Utils;
@@ -455,6 +466,7 @@
 				ED57F3402181BDA90009BDC2 /* AppStart_ViewController.swift in Sources */,
 				ED57F3442181C1B80009BDC2 /* Home_ViewController.swift in Sources */,
 				ED57F3502181F85A0009BDC2 /* Poll_ViewController.swift in Sources */,
+				D10E67052182FBC1003F88CE /* SessionService.swift in Sources */,
 				D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */,
 				D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */,
 				D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */,
