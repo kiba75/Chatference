@@ -26,7 +26,17 @@ class CommentApi: ConnectionApi {
             
             if snapshot.exists() {
                 let question = Comment(snapshot: snapshot)
-//                print(question)
+                observe(question!)
+            }
+        }
+    }
+    
+    func listenForUpdates(room: Room, observe: @escaping (Comment) -> Void) {
+    
+        getDataBaseReference().child("Comment").queryOrdered(byChild: "roomUuid").queryEqual(toValue: room.uuid).observe(.childChanged) { (snapshot) in
+            
+            if snapshot.exists() {
+                let question = Comment(snapshot: snapshot)
                 observe(question!)
             }
         }
