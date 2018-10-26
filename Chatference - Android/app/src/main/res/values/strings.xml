@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Chatference</string>
+    <string name="title_activity_main_page">MainPageActivity</string>
 </resources>
