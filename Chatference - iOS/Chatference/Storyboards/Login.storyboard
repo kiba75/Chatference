@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-kA-Jev">
-                                <rect key="frame" x="129" y="221.5" width="117.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-kA-Jev">
+                                <rect key="frame" x="131" y="233.5" width="113.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FJl-qb-o8k">
-                                <rect key="frame" x="127.5" y="93.5" width="120" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="FJl-qb-o8k">
+                                <rect key="frame" x="127.5" y="81.5" width="120" height="144"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="EeX-Ur-ndG"/>
+                                    <constraint firstAttribute="height" constant="144" id="EeX-Ur-ndG"/>
                                     <constraint firstAttribute="width" constant="120" id="mto-En-On7"/>
                                 </constraints>
                             </imageView>
@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" placeholder="Session Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZk-ZZ-93v">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Session Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZk-ZZ-93v">
                                 <rect key="frame" x="16" y="303.5" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="g8P-ld-y2z"/>
@@ -66,6 +66,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="join" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="joinPressed" destination="9ND-7g-aJc" eventType="primaryActionTriggered" id="NOn-OW-YLw"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mb-z8-vry">
                                 <rect key="frame" x="16" y="371.5" width="343" height="60"/>
@@ -95,15 +98,15 @@
                                     <action selector="pressedChangeMode:" destination="9ND-7g-aJc" eventType="touchUpInside" id="BkO-dW-C9d"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-e9-Y2d">
-                                <rect key="frame" x="127.5" y="93.5" width="120" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-e9-Y2d">
+                                <rect key="frame" x="127.5" y="81.5" width="120" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="aEh-n6-YZ9"/>
-                                    <constraint firstAttribute="height" constant="120" id="dKI-Lj-c6S"/>
+                                    <constraint firstAttribute="height" constant="144" id="dKI-Lj-c6S"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFa-AR-pVO">
-                                <rect key="frame" x="129" y="221.5" width="117.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFa-AR-pVO">
+                                <rect key="frame" x="131" y="233.5" width="113.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -150,4 +153,7 @@
             <point key="canvasLocation" x="1955" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_logo" width="100" height="120"/>
+    </resources>
 </document>

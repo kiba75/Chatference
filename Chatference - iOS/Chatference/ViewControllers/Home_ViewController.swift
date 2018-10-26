@@ -16,6 +16,7 @@ class Home_ViewController: UIViewController {
     //weak var pollViewController: Poll_ViewController?
 
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var postButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,10 @@ class Home_ViewController: UIViewController {
         hideNavigationBarBorder()
         
         pollView.setupView()
+        
+        postButton.layer.cornerRadius = postButton.frame.height/2
+        commentTextField.layer.cornerRadius = commentTextField.frame.height / 2
+        commentTextField.layer.masksToBounds = true
     }
 }
 

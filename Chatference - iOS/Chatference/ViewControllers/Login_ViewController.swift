@@ -29,6 +29,8 @@ class Login_ViewController: UIViewController {
 
     //MARK: - Actions
     @IBAction func joinPressed() {
+
+        sessionTextField.resignFirstResponder()
         
         switch self.mode {
         case .join:

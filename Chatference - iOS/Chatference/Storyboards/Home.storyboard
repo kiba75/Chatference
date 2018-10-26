@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDF-NJ-EaU" userLabel="AnswersTableView Container">
-                                <rect key="frame" x="0.0" y="80" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="556"/>
                                 <connections>
                                     <segue destination="e2k-Jw-qBY" kind="embed" identifier="embeded_AnswersTableViewController" id="h3Z-Od-QWc"/>
                                 </connections>
@@ -37,13 +37,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-V6-lvo">
                                 <rect key="frame" x="0.0" y="626" width="375" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-sd-Kud">
-                                        <rect key="frame" x="325" y="11" width="42" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-sd-Kud">
+                                        <rect key="frame" x="317" y="11" width="42" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="J1N-aa-awM"/>
                                             <constraint firstAttribute="height" constant="42" id="X3n-oh-ZaH"/>
                                         </constraints>
-                                        <state key="normal" title="&gt;&gt;">
+                                        <state key="normal" image="ic_send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -51,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Do you have a question or comment?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-Tj-B3j">
-                                        <rect key="frame" x="16" y="12" width="293" height="40"/>
+                                        <rect key="frame" x="16" y="12" width="285" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="wdc-sm-auh"/>
                                         </constraints>
@@ -70,22 +71,22 @@
                                     <constraint firstItem="fPz-sd-Kud" firstAttribute="top" secondItem="L2f-V6-lvo" secondAttribute="top" constant="11" id="Nnd-ek-X9q"/>
                                     <constraint firstAttribute="height" constant="64" id="OI3-aP-EE3"/>
                                     <constraint firstItem="fPz-sd-Kud" firstAttribute="leading" secondItem="vwx-Tj-B3j" secondAttribute="trailing" constant="16" id="aBh-uG-Hfd"/>
-                                    <constraint firstAttribute="trailing" secondItem="fPz-sd-Kud" secondAttribute="trailing" constant="8" id="i9X-bX-qJl"/>
+                                    <constraint firstAttribute="trailing" secondItem="fPz-sd-Kud" secondAttribute="trailing" constant="16" id="i9X-bX-qJl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfl-iu-IlZ" customClass="Poll_View" customModule="Chatference" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQQ-ji-IpQ" userLabel="RoundedView">
                                         <rect key="frame" x="10" y="10" width="355" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-Wo-qc0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-Wo-qc0">
                                                 <rect key="frame" x="317" y="15" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="dg3-Qd-3r1"/>
                                                     <constraint firstAttribute="height" constant="30" id="fPQ-GZ-oJ6"/>
                                                 </constraints>
-                                                <state key="normal" title="&gt;">
+                                                <state key="normal" image="ic_chevron_right">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -99,9 +100,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJS-0d-Coc">
-                                                <rect key="frame" x="8" y="10" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_poll_done" translatesAutoresizingMaskIntoConstraints="NO" id="GJS-0d-Coc">
+                                                <rect key="frame" x="15" y="15" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="eWW-ed-dgK"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zLz-Wb-obo"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-ty-Lui">
                                                 <rect key="frame" x="56" y="36" width="23" height="14"/>
@@ -116,12 +120,14 @@
                                             <constraint firstItem="zS2-Wo-qc0" firstAttribute="centerY" secondItem="VQQ-ji-IpQ" secondAttribute="centerY" id="6HP-nU-Nsv"/>
                                             <constraint firstAttribute="trailing" secondItem="zS2-Wo-qc0" secondAttribute="trailing" constant="8" id="NDo-na-xRB"/>
                                             <constraint firstAttribute="height" constant="60" id="eQe-Tu-qcI"/>
+                                            <constraint firstItem="GJS-0d-Coc" firstAttribute="leading" secondItem="VQQ-ji-IpQ" secondAttribute="leading" constant="15" id="htm-5q-Y95"/>
+                                            <constraint firstItem="GJS-0d-Coc" firstAttribute="centerY" secondItem="VQQ-ji-IpQ" secondAttribute="centerY" id="twc-1h-XvJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="PwO-jz-ti4"/>
+                                    <constraint firstAttribute="height" constant="70" id="PwO-jz-ti4"/>
                                     <constraint firstItem="VQQ-ji-IpQ" firstAttribute="top" secondItem="lfl-iu-IlZ" secondAttribute="top" constant="10" id="WmM-g5-2QK"/>
                                     <constraint firstAttribute="trailing" secondItem="VQQ-ji-IpQ" secondAttribute="trailing" constant="10" id="oS4-9F-ANh"/>
                                     <constraint firstItem="VQQ-ji-IpQ" firstAttribute="leading" secondItem="lfl-iu-IlZ" secondAttribute="leading" constant="10" id="wFO-bB-jsK"/>
@@ -157,6 +163,7 @@
                     <connections>
                         <outlet property="commentTextField" destination="vwx-Tj-B3j" id="nHg-sv-QrZ"/>
                         <outlet property="pollView" destination="lfl-iu-IlZ" id="TPn-zN-iL0"/>
+                        <outlet property="postButton" destination="fPz-sd-Kud" id="rli-N3-wtu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-IM-tPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,4 +199,9 @@
             <point key="canvasLocation" x="-454" y="385"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_chevron_right" width="8.6666669845581055" height="14.333333015441895"/>
+        <image name="ic_poll_done" width="20" height="20"/>
+        <image name="ic_send" width="17" height="14.666666984558105"/>
+    </resources>
 </document>
