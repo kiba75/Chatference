@@ -17,7 +17,7 @@ class Home_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = SessionService.shared.room?.name
         setupView()
     }
 
