@@ -25,6 +25,8 @@ class Answer_TableViewCell: UITableViewCell {
         voteLabel.text = String(question.votes)
         if question.votes > 0 {
             upvoteImage.image = #imageLiteral(resourceName: "ic_upvote_active")
+        } else {
+            upvoteImage.image = #imageLiteral(resourceName: "ic_upvote_inactive")
         }
     }
 }
