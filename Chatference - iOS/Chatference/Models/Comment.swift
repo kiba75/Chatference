@@ -24,7 +24,7 @@ class Comment {
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String:Any] else { return nil }
-        guard let question = dict["question"]  as? String else { return nil }
+        guard let question = dict["comment"]  as? String else { return nil }
         guard let roomUuid = dict["roomUuid"]  as? String else { return nil }
         guard let state  = dict["state"] as? Int  else { return nil }
         guard let votes  = dict["votes"] as? Int  else { return nil }
