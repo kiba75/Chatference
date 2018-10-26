@@ -13,7 +13,7 @@ class Home_ViewController: UIViewController {
     @IBOutlet weak var pollView: Poll_View!
 
     weak var answersTableViewController: Answer_TableViewController?
-    weak var pollViewController: Poll_ViewController?
+    //weak var pollViewController: Poll_ViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,10 @@ class Home_ViewController: UIViewController {
             return
         }
 
-        if segue.identifier == "embeded_PollViewController" {
-            pollViewController = segue.destination as? Poll_ViewController
-            return
-        }
+//        if segue.identifier == "embeded_PollViewController" {
+//            pollViewController = segue.destination as? Poll_ViewController
+//            return
+//        }
     }
 
     //MARK: - Actions
@@ -44,7 +44,6 @@ class Home_ViewController: UIViewController {
         hideNavigationBarBorder()
         
         pollView.setupView()
-        pollViewController?.view.removeFromSuperview()
     }
 }
 
