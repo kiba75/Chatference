@@ -10,6 +10,7 @@ import UIKit
 
 class AppStart_ViewController: UIViewController {
 
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var logoLabel: UILabel!
 
     private let delayTime: Int = 2
@@ -17,6 +18,7 @@ class AppStart_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        logoImageView.alpha = 0
         logoLabel.alpha = 0
     }
 
@@ -33,6 +35,7 @@ class AppStart_ViewController: UIViewController {
     func animateLogo() {
         UIView.animate(withDuration: 1) {
             self.logoLabel.alpha = 1
+            self.logoImageView.alpha = 1
         }
     }
 

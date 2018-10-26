@@ -11,8 +11,6 @@
 		D10E67002182FA21003F88CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
 		D10E67052182FBC1003F88CE /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E67042182FBC1003F88CE /* SessionService.swift */; };
 		D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389B2181ACEE00887ED9 /* AppDelegate.swift */; };
-		D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389D2181ACEE00887ED9 /* ViewController.swift */; };
-		D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C389F2181ACEE00887ED9 /* Main.storyboard */; };
 		D19C38A32181ACEF00887ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D19C38A22181ACEF00887ED9 /* Assets.xcassets */; };
 		D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */; };
 		D19C38B12181ACEF00887ED9 /* ChatferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38B02181ACEF00887ED9 /* ChatferenceTests.swift */; };
@@ -58,8 +56,6 @@
 		D10E67042182FBC1003F88CE /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		D19C38982181ACEE00887ED9 /* Chatference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C389B2181ACEE00887ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D19C389D2181ACEE00887ED9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D19C38A02181ACEE00887ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D19C38A22181ACEF00887ED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D19C38A52181ACEF00887ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D19C38A72181ACEF00887ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,7 +209,6 @@
 				ED57F3412181BDBA0009BDC2 /* Login_ViewController.swift */,
 				ED57F3432181C1B80009BDC2 /* Home_ViewController.swift */,
 				ED57F34F2181F85A0009BDC2 /* Poll_ViewController.swift */,
-				D19C389D2181ACEE00887ED9 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,7 +255,6 @@
 				ED57F33D2181BC150009BDC2 /* Login.storyboard */,
 				ED57F3452181C1E80009BDC2 /* Home.storyboard */,
 				ED57F34D2181E4ED0009BDC2 /* AnswersTableViewController.storyboard */,
-				D19C389F2181ACEE00887ED9 /* Main.storyboard */,
 				D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */,
 				ED57F3512181F8CC0009BDC2 /* Poll.storyboard */,
 			);
@@ -388,7 +382,6 @@
 				ED57F3462181C1E80009BDC2 /* Home.storyboard in Resources */,
 				ED57F3522181F8CC0009BDC2 /* Poll.storyboard in Resources */,
 				ED57F33E2181BC150009BDC2 /* Login.storyboard in Resources */,
-				D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +458,6 @@
 				ED57F3442181C1B80009BDC2 /* Home_ViewController.swift in Sources */,
 				ED57F3502181F85A0009BDC2 /* Poll_ViewController.swift in Sources */,
 				D10E67052182FBC1003F88CE /* SessionService.swift in Sources */,
-				D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */,
 				D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */,
 				D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */,
 				D19C38CF2181D7B000887ED9 /* Room.swift in Sources */,
@@ -508,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D19C389F2181ACEE00887ED9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D19C38A02181ACEE00887ED9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
