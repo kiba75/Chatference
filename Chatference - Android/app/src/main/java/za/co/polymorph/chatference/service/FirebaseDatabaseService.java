@@ -2,7 +2,6 @@ package za.co.polymorph.chatference.service;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -13,10 +12,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import za.co.polymorph.chatference.callbacks.CreateRoomCallback;
+import za.co.polymorph.chatference.callbacks.GetCommentsCallback;
 import za.co.polymorph.chatference.callbacks.GetQuestionsCallback;
 import za.co.polymorph.chatference.callbacks.GetRoomCallback;
+import za.co.polymorph.chatference.callbacks.PostCommentCallback;
 import za.co.polymorph.chatference.callbacks.PostQuestionCallback;
 import za.co.polymorph.chatference.interfaces.IDatabaseService;
+import za.co.polymorph.chatference.model.Comment;
 import za.co.polymorph.chatference.model.Question;
 import za.co.polymorph.chatference.model.Room;
 
@@ -25,6 +27,7 @@ public class FirebaseDatabaseService implements IDatabaseService {
     private static DatabaseReference database = null;
     private static FirebaseDatabaseService firebaseService = null;
     private static ValueEventListener questionValueEventListener = null;
+    private static ValueEventListener commentValueEventListener = null;
 
     private FirebaseDatabaseService() {
         this.database = FirebaseDatabase.getInstance().getReference();
@@ -143,6 +146,72 @@ public class FirebaseDatabaseService implements IDatabaseService {
 
     @Override
     public void cancelGettingQuestions() {
+        if (questionValueEventListener != null) {
+            database.removeEventListener(questionValueEventListener);
+        }
+
+        questionValueEventListener = null;
+    }
+
+    @Override
+    public void postComment(String roomUuid, String comment, final PostCommentCallback postCommentCallback) {
+        final Comment commentEntry = new Comment(roomUuid, comment, 0, 1);
+
+        database.child("Comment").child(database.push().getKey()).setValue(commentEntry, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                if (databaseError == null) {
+                    commentEntry.setId(databaseReference.getKey());
+                    postCommentCallback.success(commentEntry);
+                } else {
+                    postCommentCallback.error(databaseError.getMessage());
+                }
+
+            }
+        });
+    }
+
+    @Override
+    public void getComments(String roomUuid, final GetCommentsCallback getCommentsCallback) {
+        if (questionValueEventListener != null) {
+            cancelGettingComments();
+        }
+
+        commentValueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                ArrayList<Comment> allComments = new ArrayList<>();
+
+                for (DataSnapshot singelComment : dataSnapshot.getChildren()) {
+                    String id = singelComment.getKey();
+                    String questionText = (String) singelComment.child("comment").getValue();
+                    String roomUuid = (String) singelComment.child("roomUuid").getValue();
+                    long state = (long) singelComment.child("state").getValue();
+                    long votes = (long) singelComment.child("votes").getValue();
+
+                    Comment comment = new Comment(roomUuid, questionText, (int) votes, (int) state);
+                    comment.setId(id);
+
+                    allComments.add(comment);
+                }
+
+                Comment [] comments =  new Comment[allComments.size()];
+                comments = allComments.toArray(comments);
+                getCommentsCallback.commentsUpdate(comments);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                getCommentsCallback.error(databaseError.getMessage());
+            }
+        };
+
+        database.child("Comment").orderByChild("roomUuid").equalTo(roomUuid).addValueEventListener(commentValueEventListener);
+    }
+
+    @Override
+    public void cancelGettingComments() {
         if (questionValueEventListener != null) {
             database.removeEventListener(questionValueEventListener);
         }
