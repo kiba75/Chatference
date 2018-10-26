@@ -9,18 +9,16 @@
 import Foundation
 import FirebaseDatabase
 
-class Question {
+class Comment {
     let question: String
     let roomUuid: String
     let state: Int
-    let type: Int
     let votes: Int
     
-    init(question: String, roomUuid: String, state: Int, type: Int, votes: Int) {
+    init(question: String, roomUuid: String, state: Int, votes: Int) {
         self.question = question
         self.roomUuid = roomUuid
         self.state = state
-        self.type = type
         self.votes = votes
     }
     
@@ -29,13 +27,11 @@ class Question {
         guard let question = dict["question"]  as? String else { return nil }
         guard let roomUuid = dict["roomUuid"]  as? String else { return nil }
         guard let state  = dict["state"] as? Int  else { return nil }
-        guard let type  = dict["type"] as? Int  else { return nil }
         guard let votes  = dict["votes"] as? Int  else { return nil }
         
         self.question = question
         self.roomUuid = roomUuid
         self.state = state
-        self.type = type
         self.votes = votes
     }
 }

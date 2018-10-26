@@ -17,7 +17,7 @@ class Answer_TableViewCell: UITableViewCell {
     //@IBOutlet weak var voteButton: UIButton!
     @IBOutlet weak var voteLabel: UILabel!
 
-    func setupCell(_ question: Question) {
+    func setupCell(_ question: Comment) {
         // Upcoming functionality
         nameLabel.text = ""
 

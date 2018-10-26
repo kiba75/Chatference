@@ -19,6 +19,11 @@ class Home_ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = SessionService.shared.room?.name
         setupView()
+        
+        CommentApi().postComment(room: SessionService.shared.room! , comment: "HELLO THIS IS A COMMENT") {
+            // fsfsd
+        }
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
