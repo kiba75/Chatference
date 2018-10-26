@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		324072A09F94754615B09BD3 /* Pods_Chatference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E23AD40C2BEFE055690F21 /* Pods_Chatference.framework */; };
+		D10E67002182FA21003F88CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
 		D19C389C2181ACEE00887ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389B2181ACEE00887ED9 /* AppDelegate.swift */; };
 		D19C389E2181ACEE00887ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C389D2181ACEE00887ED9 /* ViewController.swift */; };
 		D19C38A12181ACEE00887ED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C389F2181ACEE00887ED9 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C38A42181ACEF00887ED9 /* LaunchScreen.storyboard */; };
 		D19C38B12181ACEF00887ED9 /* ChatferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38B02181ACEF00887ED9 /* ChatferenceTests.swift */; };
 		D19C38BC2181ACEF00887ED9 /* ChatferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38BB2181ACEF00887ED9 /* ChatferenceUITests.swift */; };
-		D19C38CA2181BADD00887ED9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */; };
 		D19C38CD2181C88B00887ED9 /* ConnectionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CC2181C88B00887ED9 /* ConnectionApi.swift */; };
 		D19C38CF2181D7B000887ED9 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38CE2181D7B000887ED9 /* Room.swift */; };
 		D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D02181DCBE00887ED9 /* RoomApi.swift */; };
@@ -73,7 +73,6 @@
 		D19C38D02181DCBE00887ED9 /* RoomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApi.swift; sourceTree = "<group>"; };
 		D19C38D221820F2A00887ED9 /* QuestionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionApi.swift; sourceTree = "<group>"; };
 		D19C38D421823E9500887ED9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		D19C38C92181BADD00887ED9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Chatference/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED57F33D2181BC150009BDC2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		ED57F33F2181BDA90009BDC2 /* AppStart_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStart_ViewController.swift; sourceTree = "<group>"; };
 		ED57F3412181BDBA0009BDC2 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
@@ -371,7 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D19C38CA2181BADD00887ED9 /* GoogleService-Info.plist in Resources */,
+				D10E67002182FA21003F88CE /* GoogleService-Info.plist in Resources */,
 				ED57F34E2181E4ED0009BDC2 /* AnswersTableViewController.storyboard in Resources */,
 				D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */,
 				D19C38A32181ACEF00887ED9 /* Assets.xcassets in Resources */,
