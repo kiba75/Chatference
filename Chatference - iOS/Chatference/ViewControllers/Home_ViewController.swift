@@ -22,10 +22,6 @@ class Home_ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = SessionService.shared.room?.name
         setupView()
-        
-        CommentApi().postComment(room: SessionService.shared.room! , comment: "Testing comment for filling up space ect ect lets see if it wraps please! ") {
-            // fsfsd
-        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,6 +83,8 @@ extension Home_ViewController {
             return
         }
 
-        //api here
+        CommentApi().postComment(room: SessionService.shared.room! , comment: text!) {
+            // Do stuff if needed
+        }
     }
 }

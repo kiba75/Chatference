@@ -58,7 +58,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         <connections>
                                             <action selector="keyboardReturnPressed" destination="MEO-xd-612" eventType="primaryActionTriggered" id="AdX-1f-ThP"/>
                                         </connections>
@@ -200,8 +200,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_chevron_right" width="8.6666669845581055" height="14.333333015441895"/>
+        <image name="ic_chevron_right" width="8" height="14"/>
         <image name="ic_poll_done" width="20" height="20"/>
-        <image name="ic_send" width="17" height="14.666666984558105"/>
+        <image name="ic_send" width="17" height="14"/>
     </resources>
 </document>
