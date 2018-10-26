@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class Login_ViewController: UIViewController {
 
@@ -27,9 +28,12 @@ class Login_ViewController: UIViewController {
         setupView()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - Actions
     @IBAction func joinPressed() {
-
         sessionTextField.resignFirstResponder()
         
         switch self.mode {
@@ -62,10 +66,24 @@ class Login_ViewController: UIViewController {
 
     //MARK: - View Setup
     private func setupView() {
-
         sessionTextField.layer.cornerRadius = sessionTextField.frame.height / 2
         sessionTextField.layer.masksToBounds = true
         
         joinButton.layer.cornerRadius = joinButton.frame.height / 2
+
+        animateLogo()
+    }
+
+    func animateLogo() {
+
+        let animationView: LOTAnimationView = LOTAnimationView(name: "logo03")
+        animationView.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
+        animationView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 180)
+        animationView.contentMode = .scaleAspectFill
+
+        view.addSubview(animationView)
+
+        animationView.loopAnimation = true
+        animationView.play()
     }
 }
