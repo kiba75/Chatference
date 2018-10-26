@@ -10,6 +10,7 @@ target "Chatference" do
 
 	pod 'Alamofire'
     pod 'SDWebImage'
-    pod 'Firebase'
+	pod 'Firebase'
+	pod 'Firebase/Database'
     
 end
