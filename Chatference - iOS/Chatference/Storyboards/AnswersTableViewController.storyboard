@@ -17,37 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCellIdentifier" id="aIS-Nk-QKF" customClass="Answer_TableViewCell" customModule="Chatference" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCellIdentifier" rowHeight="183" id="aIS-Nk-QKF" customClass="Answer_TableViewCell" customModule="Chatference" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="183"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aIS-Nk-QKF" id="hfj-k3-hV8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@James" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vx-gG-071">
-                                            <rect key="frame" x="16" y="0.0" width="48" height="20"/>
+                                            <rect key="frame" x="16" y="15" width="58.5" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="u7m-ho-9VA"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.3803921569" green="0.51764705879999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.14509803921568626" green="0.61960784313725492" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an answer..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-Rk-HaM">
-                                            <rect key="frame" x="16" y="20" width="313" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shfj adklsfl jkasdhfjk lsdhfjk hafsjk hasjkfh jksfjklsahfjkl sajlsfsdfh adflsks sdhf ahsjlkdf sfladf " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-Rk-HaM">
+                                            <rect key="frame" x="16" y="35" width="313" height="132"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P7-fJ-H9j" userLabel="Separator">
-                                            <rect key="frame" x="16" y="43" width="359" height="1"/>
-                                            <color key="backgroundColor" red="0.32549019610000002" green="0.2274509804" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="0.0" y="182" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="dlc-dC-gWt"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-XZ-BY5">
-                                            <rect key="frame" x="337" y="2" width="30" height="40"/>
+                                            <rect key="frame" x="337" y="71.5" width="30" height="40"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U6Q-uO-QmW">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -57,7 +57,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGH-iq-OXk">
                                                     <rect key="frame" x="0.0" y="30" width="30" height="10"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -84,13 +84,13 @@
                                         <constraint firstItem="Af8-XZ-BY5" firstAttribute="centerY" secondItem="hfj-k3-hV8" secondAttribute="centerY" id="5bY-qS-vam"/>
                                         <constraint firstAttribute="trailing" secondItem="Af8-XZ-BY5" secondAttribute="trailing" constant="8" id="78h-gI-9kV"/>
                                         <constraint firstAttribute="trailing" secondItem="1P7-fJ-H9j" secondAttribute="trailing" id="7MM-pH-Rfe"/>
-                                        <constraint firstItem="1P7-fJ-H9j" firstAttribute="leading" secondItem="hfj-k3-hV8" secondAttribute="leading" constant="16" id="C5U-Uf-SCy"/>
+                                        <constraint firstItem="1P7-fJ-H9j" firstAttribute="leading" secondItem="hfj-k3-hV8" secondAttribute="leading" id="C5U-Uf-SCy"/>
                                         <constraint firstItem="g8g-Rk-HaM" firstAttribute="leading" secondItem="hfj-k3-hV8" secondAttribute="leadingMargin" id="LDg-Rf-esL"/>
                                         <constraint firstItem="7Vx-gG-071" firstAttribute="leading" secondItem="hfj-k3-hV8" secondAttribute="leading" constant="16" id="NFW-pg-drG"/>
                                         <constraint firstItem="Af8-XZ-BY5" firstAttribute="leading" secondItem="g8g-Rk-HaM" secondAttribute="trailing" constant="8" id="V7c-S4-TkK"/>
-                                        <constraint firstItem="7Vx-gG-071" firstAttribute="top" secondItem="hfj-k3-hV8" secondAttribute="top" id="WFD-7u-LUg"/>
+                                        <constraint firstItem="7Vx-gG-071" firstAttribute="top" secondItem="hfj-k3-hV8" secondAttribute="top" constant="15" id="WFD-7u-LUg"/>
                                         <constraint firstAttribute="bottom" secondItem="1P7-fJ-H9j" secondAttribute="bottom" id="gIW-zB-31B"/>
-                                        <constraint firstItem="1P7-fJ-H9j" firstAttribute="top" secondItem="g8g-Rk-HaM" secondAttribute="bottom" constant="8" id="xal-uk-siG"/>
+                                        <constraint firstItem="1P7-fJ-H9j" firstAttribute="top" secondItem="g8g-Rk-HaM" secondAttribute="bottom" constant="15" id="xal-uk-siG"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

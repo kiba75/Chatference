@@ -22,7 +22,7 @@ class Home_ViewController: UIViewController {
         self.navigationItem.title = SessionService.shared.room?.name
         setupView()
         
-        CommentApi().postComment(room: SessionService.shared.room! , comment: "HELLO THIS IS A COMMENT") {
+        CommentApi().postComment(room: SessionService.shared.room! , comment: "Testing comment for filling up space ect ect lets see if it wraps please! ") {
             // fsfsd
         }
     }
