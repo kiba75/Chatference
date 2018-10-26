@@ -54,7 +54,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1450980392" green="0.61960784310000006" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,12 +67,6 @@
                                     <constraint firstAttribute="trailing" secondItem="fPz-sd-Kud" secondAttribute="trailing" constant="8" id="i9X-bX-qJl"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1m-4r-sZg" userLabel="PollView Container">
-                                <rect key="frame" x="10" y="10" width="355" height="672"/>
-                                <connections>
-                                    <segue destination="tyd-0q-Upw" kind="embed" identifier="embeded_PollViewController" id="gg8-HH-Tyr"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfl-iu-IlZ" customClass="Poll_View" customModule="Chatference" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
@@ -119,8 +113,6 @@
                             <constraint firstItem="IDF-NJ-EaU" firstAttribute="trailing" secondItem="zgk-UZ-XMx" secondAttribute="trailing" id="5I8-OH-mIu"/>
                             <constraint firstItem="6WB-b3-jwt" firstAttribute="top" secondItem="IDF-NJ-EaU" secondAttribute="bottom" id="D1F-6v-Sin"/>
                             <constraint firstAttribute="bottom" secondItem="6WB-b3-jwt" secondAttribute="bottom" id="I5P-oN-RPQ"/>
-                            <constraint firstItem="zgk-UZ-XMx" firstAttribute="trailing" secondItem="p1m-4r-sZg" secondAttribute="trailing" constant="10" id="LNn-TY-rdm"/>
-                            <constraint firstItem="p1m-4r-sZg" firstAttribute="leading" secondItem="zgk-UZ-XMx" secondAttribute="leading" constant="10" id="Nki-4E-66N"/>
                             <constraint firstItem="GGF-7h-Zey" firstAttribute="trailing" secondItem="zgk-UZ-XMx" secondAttribute="trailing" id="OCI-XO-IAK"/>
                             <constraint firstItem="IDF-NJ-EaU" firstAttribute="top" secondItem="lfl-iu-IlZ" secondAttribute="bottom" id="QgV-IJ-cxk"/>
                             <constraint firstItem="lfl-iu-IlZ" firstAttribute="leading" secondItem="zgk-UZ-XMx" secondAttribute="leading" id="aOh-7n-PSZ"/>
@@ -132,8 +124,6 @@
                             <constraint firstItem="GGF-7h-Zey" firstAttribute="leading" secondItem="zgk-UZ-XMx" secondAttribute="leading" id="iRK-aF-baX"/>
                             <constraint firstItem="zgk-UZ-XMx" firstAttribute="bottom" secondItem="L2f-V6-lvo" secondAttribute="bottom" id="l8v-9t-fiz"/>
                             <constraint firstItem="zgk-UZ-XMx" firstAttribute="trailing" secondItem="6WB-b3-jwt" secondAttribute="trailing" id="lNz-PH-jTO"/>
-                            <constraint firstItem="zgk-UZ-XMx" firstAttribute="bottom" secondItem="p1m-4r-sZg" secondAttribute="bottom" constant="8" id="m47-of-vQI"/>
-                            <constraint firstItem="p1m-4r-sZg" firstAttribute="top" secondItem="zgk-UZ-XMx" secondAttribute="top" constant="10" id="nQO-LL-v7h"/>
                             <constraint firstItem="GGF-7h-Zey" firstAttribute="top" secondItem="zgk-UZ-XMx" secondAttribute="top" id="nY4-Cm-G9E"/>
                             <constraint firstItem="zgk-UZ-XMx" firstAttribute="trailing" secondItem="L2f-V6-lvo" secondAttribute="trailing" id="xhg-rH-1YE"/>
                         </constraints>

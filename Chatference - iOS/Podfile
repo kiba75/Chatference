@@ -8,9 +8,10 @@ use_frameworks!
 
 target "Chatference" do
 
-	pod 'Alamofire'
-    pod 'SDWebImage'
+    #pod 'Alamofire'
+    #pod 'SDWebImage'
 	pod 'Firebase'
 	pod 'Firebase/Database'
+    pod 'IQKeyboardManagerSwift'
     
 end
