@@ -20,8 +20,8 @@
 		D19C38D12181DCBE00887ED9 /* RoomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D02181DCBE00887ED9 /* RoomApi.swift */; };
 		D19C38D321820F2A00887ED9 /* CommentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D221820F2A00887ED9 /* CommentApi.swift */; };
 		D19C38D521823E9500887ED9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C38D421823E9500887ED9 /* Comment.swift */; };
+		ED068EBC2183342600E37C7A /* logo02.json in Resources */ = {isa = PBXBuildFile; fileRef = ED068EBB2183342600E37C7A /* logo02.json */; };
 		ED57F33E2181BC150009BDC2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED57F33D2181BC150009BDC2 /* Login.storyboard */; };
-		ED57F3402181BDA90009BDC2 /* AppStart_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57F33F2181BDA90009BDC2 /* AppStart_ViewController.swift */; };
 		ED57F3422181BDBA0009BDC2 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57F3412181BDBA0009BDC2 /* Login_ViewController.swift */; };
 		ED57F3442181C1B80009BDC2 /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57F3432181C1B80009BDC2 /* Home_ViewController.swift */; };
 		ED57F3462181C1E80009BDC2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED57F3452181C1E80009BDC2 /* Home.storyboard */; };
@@ -71,8 +71,8 @@
 		D19C38D02181DCBE00887ED9 /* RoomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApi.swift; sourceTree = "<group>"; };
 		D19C38D221820F2A00887ED9 /* CommentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentApi.swift; sourceTree = "<group>"; };
 		D19C38D421823E9500887ED9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		ED068EBB2183342600E37C7A /* logo02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo02.json; sourceTree = "<group>"; };
 		ED57F33D2181BC150009BDC2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		ED57F33F2181BDA90009BDC2 /* AppStart_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStart_ViewController.swift; sourceTree = "<group>"; };
 		ED57F3412181BDBA0009BDC2 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
 		ED57F3432181C1B80009BDC2 /* Home_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
 		ED57F3452181C1E80009BDC2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -202,10 +202,17 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		ED068EB82183314500E37C7A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				ED068EBB2183342600E37C7A /* logo02.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		ED57F3362181B4FE0009BDC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED57F33F2181BDA90009BDC2 /* AppStart_ViewController.swift */,
 				ED57F3412181BDBA0009BDC2 /* Login_ViewController.swift */,
 				ED57F3432181C1B80009BDC2 /* Home_ViewController.swift */,
 				ED57F34F2181F85A0009BDC2 /* Poll_ViewController.swift */,
@@ -226,6 +233,7 @@
 		ED57F3382181B50C0009BDC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED068EB82183314500E37C7A /* Animations */,
 				D19C38A22181ACEF00887ED9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -376,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10E67002182FA21003F88CE /* GoogleService-Info.plist in Resources */,
+				ED068EBC2183342600E37C7A /* logo02.json in Resources */,
 				ED57F34E2181E4ED0009BDC2 /* AnswersTableViewController.storyboard in Resources */,
 				D19C38A62181ACEF00887ED9 /* LaunchScreen.storyboard in Resources */,
 				D19C38A32181ACEF00887ED9 /* Assets.xcassets in Resources */,
@@ -430,6 +439,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -437,6 +447,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +465,6 @@
 				D19C38D321820F2A00887ED9 /* CommentApi.swift in Sources */,
 				ED57F3422181BDBA0009BDC2 /* Login_ViewController.swift in Sources */,
 				ED57F3482181C4430009BDC2 /* Poll_View.swift in Sources */,
-				ED57F3402181BDA90009BDC2 /* AppStart_ViewController.swift in Sources */,
 				ED57F3442181C1B80009BDC2 /* Home_ViewController.swift in Sources */,
 				ED57F3502181F85A0009BDC2 /* Poll_ViewController.swift in Sources */,
 				D10E67052182FBC1003F88CE /* SessionService.swift in Sources */,
@@ -633,6 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A3GC9ET5V;
 				INFOPLIST_FILE = "Chatference/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A3GC9ET5V;
 				INFOPLIST_FILE = "Chatference/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -38,7 +38,7 @@ extension Answer_TableViewController {
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = .clear
+        view.backgroundColor = .white
 
         let label = UILabel(frame: CGRect(x: 16, y: 0, width: self.view.frame.width - 16, height: 30))
         label.font = UIFont.systemFont(ofSize: 12)

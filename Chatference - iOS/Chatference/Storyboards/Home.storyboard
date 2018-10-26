@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="40" id="VO5-iN-YdI"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDF-NJ-EaU" userLabel="AnswersTableView Container">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDF-NJ-EaU" userLabel="AnswersTableView Container">
                                 <rect key="frame" x="0.0" y="70" width="375" height="556"/>
                                 <connections>
                                     <segue destination="e2k-Jw-qBY" kind="embed" identifier="embeded_AnswersTableViewController" id="h3Z-Od-QWc"/>
