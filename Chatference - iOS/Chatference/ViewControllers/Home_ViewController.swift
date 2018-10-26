@@ -23,7 +23,6 @@ class Home_ViewController: UIViewController {
         CommentApi().postComment(room: SessionService.shared.room! , comment: "HELLO THIS IS A COMMENT") {
             // fsfsd
         }
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

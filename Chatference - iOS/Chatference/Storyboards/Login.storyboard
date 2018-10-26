@@ -71,7 +71,7 @@
                                     <action selector="joinPressed" destination="9ND-7g-aJc" eventType="touchUpInside" id="mgr-Pu-Pk0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-rc-G2D">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-rc-G2D" userLabel="Mode Button">
                                 <rect key="frame" x="16" y="591" width="343" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -82,7 +82,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="joinPressed" destination="9ND-7g-aJc" eventType="touchUpInside" id="Id9-4u-Bcl"/>
+                                    <action selector="pressedChangeMode:" destination="9ND-7g-aJc" eventType="touchUpInside" id="BkO-dW-C9d"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-e9-Y2d">
