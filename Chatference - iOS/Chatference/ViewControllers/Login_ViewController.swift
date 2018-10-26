@@ -51,13 +51,13 @@ class Login_ViewController: UIViewController {
     @IBAction func pressedChangeMode(_ sender: Any) {
         if self.mode == .create {
             self.mode = .join
-            self.joinButton.setTitle("Join", for: .normal)
-            self.createButton.setTitle("Create room", for: .normal)
+            self.joinButton.setTitle("Join Session", for: .normal)
+            self.createButton.setTitle("Create Session", for: .normal)
             return
         }
         self.mode = .create
-        self.joinButton.setTitle("Create", for: .normal)
-        self.createButton.setTitle("Join room", for: .normal)
+        self.joinButton.setTitle("Create Session", for: .normal)
+        self.createButton.setTitle("Join Session", for: .normal)
     }
 
     //MARK: - View Setup
