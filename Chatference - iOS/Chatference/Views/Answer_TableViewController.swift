@@ -23,7 +23,7 @@ class Answer_TableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
         CommentApi().getComments(room: SessionService.shared.room!) { (comment) in
-            self.comments.append(comment)
+            self.comments.insert(comment, at: 0)
             self.tableView.reloadData()
         }
         
