@@ -13,7 +13,7 @@ class Answer_TableViewController: UITableViewController {
 
     @IBOutlet weak var answersTableView: UITableView!
 
-    var comments: [Comment] = [Comment(question: "Initial question", roomUuid: SessionService.shared.room!.uuid, state: 1, votes: 5)]
+    var comments: [Comment] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,16 @@ class Answer_TableViewController: UITableViewController {
         
         CommentApi().getComments(room: SessionService.shared.room!) { (comment) in
             self.comments.append(comment)
+            self.tableView.reloadData()
+        }
+        
+        CommentApi().listenForUpdates(room: SessionService.shared.room!) { (comment) in
+            for (index, x) in self.comments.enumerated() {
+                if x.questionUuid == comment.questionUuid {
+                    self.comments[index] = comment
+                    break
+                }
+            }
             self.tableView.reloadData()
         }
     }
@@ -62,8 +72,7 @@ extension Answer_TableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-         let cell: Answer_TableViewCell = tableView.dequeueReusableCell(withIdentifier: "AnswerCellIdentifier") as! Answer_TableViewCell
+        let cell: Answer_TableViewCell = tableView.dequeueReusableCell(withIdentifier: "AnswerCellIdentifier") as! Answer_TableViewCell
 
         cell.setupCell(comments[indexPath.row])
         return cell

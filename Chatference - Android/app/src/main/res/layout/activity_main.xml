@@ -14,9 +14,11 @@
         android:layout_height="155dp"
         android:layout_gravity="center_horizontal"
         android:src="@mipmap/ic_logo"
+        android:layout_marginTop="93dp"
         />
 
     <EditText
+        android:id="@+id/et_room_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
@@ -25,6 +27,7 @@
         android:background="#ffffff"/>
 
     <Button
+        android:id="@+id/btn_join_session"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"

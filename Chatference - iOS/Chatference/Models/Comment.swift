@@ -10,12 +10,14 @@ import Foundation
 import FirebaseDatabase
 
 class Comment {
+    let questionUuid: String
     let question: String
     let roomUuid: String
     let state: Int
     let votes: Int
     
-    init(question: String, roomUuid: String, state: Int, votes: Int) {
+    init(questionUuid: String, question: String, roomUuid: String, state: Int, votes: Int) {
+        self.questionUuid = questionUuid
         self.question = question
         self.roomUuid = roomUuid
         self.state = state
@@ -29,6 +31,7 @@ class Comment {
         guard let state  = dict["state"] as? Int  else { return nil }
         guard let votes  = dict["votes"] as? Int  else { return nil }
         
+        self.questionUuid = snapshot.key
         self.question = question
         self.roomUuid = roomUuid
         self.state = state
